@@ -211,12 +211,12 @@
     </style>
 
     <div class="wrap">
-        <section class="section-main" id="section-main">
+        <!-- <section class="section-main" id="section-main">
             <header>
                 <h1 align="center" style="font-size: 1.5em">Amazon Connect Omni-Channel Demo</h1>
             </header>
 
-            <!-- <form name="contactDetails" id="contactDetails" style="padding-top: 30px">
+            <form name="contactDetails" id="contactDetails" style="padding-top: 30px">
                 <fieldset>
                     <div>
                         <table>
@@ -244,9 +244,9 @@
 
                     </div>
                 </fieldset>
-            </form> -->
+            </form>
 
-        </section>
+        </section> -->
 
         <script>
             $(document).ready((a) => {
@@ -270,8 +270,8 @@
                 $('#contactDetails').submit(function (e) {
                     e.preventDefault();
                     var enableAttachments = "false";
-                    var customerName = $('#firstName').val();
-                    var username = $('#username').val();
+                    var customerName = 'FixedName';
+                    var username = 'FixedName';
                     if (!customerName || !username) {
                         alert('you must enter a name & username');
                         document.getElementById("contactDetails").reset();
@@ -281,12 +281,13 @@
                         console.log("this is the username: " + username);
                         document.getElementById("contactDetails").reset();
                         connect.ChatInterface.initiateChat({
-                            name: customerName,
-                            username: username,
+                            name: 'FixedName',
+                            username: 'FixedName',
+                            initiationIcon: 'icon',
                             region: "eu-central-1",
                             apiGatewayEndpoint: "https://m4vtxk8bob.execute-api.eu-central-1.amazonaws.com/Prod",
                             contactAttributes: JSON.stringify({
-                                "customerName": customerName
+                                "customerName": 'FixedName'
                             }),
                             contactFlowId: "30a400dc-60ef-46e8-a944-c5638b7025df",
                             instanceId: "ada716c2-185d-47a7-a46a-e81f659ccd7d",
