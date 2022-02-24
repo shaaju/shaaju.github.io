@@ -5,23 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <script>
-    $(document).ready((a) => {
-      connect.ChatInterface.init({
-        containerId: 'root',
-        headerConfig: {
-          isHTML: true,
-          render: () => {
-            return (`
-                  <div class="header-wrapper">
-                      <h2 class="welcome-text">Chat Demo</h2>
-                      <p id="chatDescription">You can modify this header or use the default.</p>
-                  </div>
-              `)
-          }
-        }
-      });
-    });</script>
+
 
   <script type="text/javascript">
     (function (w, d, x, id) {
@@ -62,28 +46,6 @@
 
 <body>
   <h1>Trying chat widget</h1>
-
-  <script>
-    $(document).ready((a) => {
-      connect.ChatInterface.init({
-        containerId: 'root', // This is the id of the container where you want the widget to reside
-        headerConfig: {      // Use the optional headerConfig and footerConfig to customize your widget
-          isHTML: true,
-          render: () => {
-            return (`<h2 class="welcome-text">Chat Demo</h2>
-                      <p id="chatDescription">You can modify this header or use the default.</p>`)
-          }
-        },
-        footerConfig: {
-          isHTML: true,
-          render: () => {
-            return (`<html code here/>`)
-          }
-        }
-      });
-    });
-
-  </script>
 
 
 </body>
