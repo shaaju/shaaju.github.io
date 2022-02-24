@@ -8,12 +8,12 @@
 
   <title>Trying Chat Widget</title>
   <style>
-    body {
+    /* body {
       height: 100vh;
       display: flex;
       align-items: center;
       background: linear-gradient(to top left, #28b487, #7dd56f);
-    }
+    } */
 
     h1 {
       font-family: sans-serif;
@@ -38,7 +38,8 @@
         headerConfig: {      // Use the optional headerConfig and footerConfig to customize your widget
           isHTML: true,
           render: () => {
-            return ((window, document, 'amazon_connect', '702e9cb0-d34d-435a-9506-97e3c7475d5a'))
+            return (`<h2 class="welcome-text">Chat Demo</h2>
+                      <p id="chatDescription">You can modify this header or use the default.</p>`)
           }
         },
         footerConfig: {
@@ -58,7 +59,7 @@
       d.getElementsByTagName('head')[0].appendChild(s);
       w[x] = w[x] || function () { (w[x].ac = w[x].ac || []).push(arguments) };
     }
-    // (window, document, 'amazon_connect', '702e9cb0-d34d-435a-9506-97e3c7475d5a');
+    (window, document, 'amazon_connect', '702e9cb0-d34d-435a-9506-97e3c7475d5a');
     amazon_connect('styles', { openChat: { color: 'white', backgroundColor: '#ef4329' }, closeChat: { color: 'white', backgroundColor: '#ef4329' } });
     amazon_connect('snippetId', 'QVFJREFIZ2l5N3VMSHNqTi93R2U5bHNUTWJvOGk0SnhWS2UzeVNxYXFGWmZIZXRzV3dFM2tLRW1VVGRlR2RHWmlhajJQZzYxQUFBQWJqQnNCZ2txaGtpRzl3MEJCd2FnWHpCZEFnRUFNRmdHQ1NxR1NJYjNEUUVIQVRBZUJnbGdoa2dCWlFNRUFTNHdFUVFNemdZRnV5ZFk4bldvak9MTUFnRVFnQ3ZCTWhxZ0kvNnRRb1JCU1NPQk1iZEhseHYyVTBCdndMVktuYUdCWWxmaWVXUmVkNnpicXhkSGZZTE86OmRjRnhKcDVZS2s3aEpESmZ0dy94SW8xa1dxcVREUkkvdkFMYnlEZ3FyeUtFQVErekY3YVJONkZvdnBrSXluOWJmWElHRUN3ZzgwZEI4N3ZoQjAzWjlCVzJtWXV0SktjeGQzZ05ZTlZrRnJ3UDl3Q1RsMTlIOXBOdkJXWjh6REczdUtnUWRoeTNOTzhwQXlYTG5nNWd6UXRmK3RkSzRGbz0=');
     amazon_connect('supportedMessagingContentTypes', ['text/plain', 'text/markdown']);
