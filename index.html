@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Chat</title>
+  <title>Chat 2</title>
   <style>
     body {
       height: 100vh;
@@ -40,9 +40,9 @@
       apiGateway: 'https://m4vtxk8bob.execute-api.eu-central-1.amazonaws.com/Prod' /* API Gateway URI */,
       contactFlowId: '30a400dc-60ef-46e8-a944-c5638b7025df',
       instanceId: 'ada716c2-185d-47a7-a46a-e81f659ccd7d',
-      contactAttr: JSON.stringify({
-        "emailAddress": "myemail"
-      }),
+      contactAttr: {
+        email: "abc@xyz.com",
+      },
 
 
       preChatForm: {
